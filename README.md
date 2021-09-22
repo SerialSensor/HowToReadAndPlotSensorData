@@ -1,2 +1,2 @@
-# HowToReadSensorData
-Example Code for reading all currently available sensors
+# 🌱 How to read sensor data 🌱
+Example Code for reading all currently available sensors!
