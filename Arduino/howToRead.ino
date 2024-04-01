@@ -39,6 +39,7 @@ const byte ORIENTATION          = 99;
 const byte LINE_SENSOR          = 100;
 const byte POSITION             = 101;
 const byte PARAMETER            = 103;
+const byte SPEED                = 105;
 
 //--------------------------------------------------------------//
 //Other constants & definitions
@@ -95,8 +96,9 @@ void loop() {
       case HEART_BEAT:
       case LINE_SENSOR:
       case ORIENTATION:
+      case SPEED:
         {
-          //all these sensors do send 3 float values. So every 4 bytes are interpreted as a float
+          //all these sensors do send up to 3 float values. So every 4 bytes are interpreted as a float
           for (int i = 0; i < REGULAR_DATA_LENGTH; i++) {
             g_receivedRegularData[i] = getFloatFrom4Bytes(g_receivedRawData, i);
           }
